@@ -5,19 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Виктория - Портфолио графического дизайнера</title>
-    <!-- Подключение шрифтов -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Space+Mono&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%23C5F04F' stroke-width='4'/></svg>">
-    <!-- Подключение внешнего файла стилей -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="custom-cursor"></div>
     <div class="container">
-        <!-- Шапка сайта -->
         <header id="header">
             <div class="logo">
                 <span class="logo-icon"></span>
@@ -31,7 +28,6 @@
             </nav>
         </header>
 
-        <!-- Главный экран -->
         <main class="hero" id="hero">
             <div class="hero-content">
                 <h1>ВИКТ<span class="letter-o"></span>РИЯ,<br><span class="text-purple">ГРАФИЧЕСКИЙ</span> ДИЗАЙНЕР</h1>
@@ -79,7 +75,6 @@
             <h2 class="section-title">Мои <span>Проекты</span></h2>
 
             <div class="projects-list">
-                <!-- Проект 2 -->
                 <div class="project-wrapper">
                     <div class="project-item">
                         <div class="project-name">POS-материалы</div>
@@ -105,7 +100,6 @@
                     </div>
                 </div>
 
-                <!-- Проект 1 -->
                 <div class="project-wrapper">
                     <div class="project-item">
                         <div class="project-name">Верстка InDesing</div>
@@ -136,7 +130,6 @@
                     </div>
                 </div>
 
-                <!-- Проект 3 -->
                 <div class="project-wrapper">
                     <div class="project-item">
                         <div class="project-name">Упаковка</div>
@@ -162,7 +155,6 @@
                     </div>
                 </div>
 
-                <!-- Проект 3 -->
                 <div class="project-wrapper">
                     <div class="project-item">
                         <div class="project-name">Инфографика</div>
@@ -192,9 +184,6 @@
                     </div>
                 </div>
 
-
-
-                <!-- Проект 5 -->
                 <div class="project-wrapper">
                     <div class="project-item">
                         <div class="project-name">Лого & фирменный стиль</div>
@@ -218,7 +207,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Проект 4 -->
+
                 <div class="project-wrapper">
                     <div class="project-item">
                         <div class="project-name">Зимниада 2024</div>
@@ -248,7 +237,6 @@
             </div>
         </section>
 
-        <!-- Секция: Обо мне -->
         <section class="about-section" id="about">
             <div class="about-image"></div>
             <div class="about-content">
@@ -280,7 +268,6 @@
             </div>
         </section>
 
-        <!-- Секция: Контакты -->
         <section class="contacts-section" id="contacts">
             <div class="contact-info">
                 <h2 class="section-title">СПОСОБЫ <span>СВЯЗИ</span></h2>
@@ -301,7 +288,7 @@
                         <div class="link-icon">Be</div>
                         behance.net
                     </a>
-                                        <a href="tel:+79936354050" class="contact-link">
+                    <a href="tel:+79936354050" class="contact-link">
                         <div class="link-icon">▢</div>
                         8-(993)-635-40-50
                     </a>
@@ -312,7 +299,6 @@
     </div>
 
     <script>
-        // Скрипт для аккордеона (раскрытия проектов)
         document.addEventListener('DOMContentLoaded', () => {
             const projectItems = document.querySelectorAll('.project-item');
 
@@ -330,7 +316,6 @@
             });
         });
 
-        // Скрипт кастомного курсора
         document.addEventListener('DOMContentLoaded', () => {
             const cursor = document.querySelector('.custom-cursor');
 
