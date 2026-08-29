@@ -661,7 +661,7 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 40px;
     position: relative;
     z-index: 10;
 }
@@ -675,7 +675,7 @@ nav a:hover {
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 font-family: "Bad Script", cursive;
   
 
