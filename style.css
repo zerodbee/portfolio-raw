@@ -588,11 +588,12 @@ nav a:hover {
 
 .polaroid {
     position: absolute;
-    top: 20px;
-    left: 60px;
-    width: 280px;
+    top: 30px;
+    left: 100px;
+    width: 100%;
+    max-width: 300px;
     background: white;
-    padding: 12px 12px 50px 12px;
+    padding: 12px 12px 30px 12px;
     box-shadow: 4px 6px 15px rgba(0,0,0,0.3);
     transform: rotate(-6deg);
     z-index: 2;
