@@ -702,7 +702,7 @@ nav a:hover {
   color: #6a9100;
 }
 
-/* Эффекты при наведении */
+
 .mini-notes-container .mini-note:nth-child(1) { transform: rotate(-4deg); }
 .mini-notes-container .mini-note:nth-child(2) { transform: rotate(3deg); }
 .mini-notes-container .mini-note:nth-child(3) { transform: rotate(-2deg); }
