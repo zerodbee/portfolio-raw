@@ -848,7 +848,7 @@ font-family: "Bad Script", cursive;
     
     .paper-footer .section-title {
         text-align: center;
-        font-size: clamp(2.8rem, 8vw, 3.5rem);
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
     }
     
     /* Contacts */
