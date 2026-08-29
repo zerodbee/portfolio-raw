@@ -849,11 +849,7 @@ nav a:hover {
         text-align: center;
         font-size: clamp(2.8rem, 8vw, 3.5rem);
     }
-    .typewriter-text, .mini-note {
-    font-size: 1.8rem;
-    line-height: 1.6;
-    }
-    
+
     /* Contacts */
     .contacts-section { flex-direction: column; }
     .paper-footer .contact-info {
