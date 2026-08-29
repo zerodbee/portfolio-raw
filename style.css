@@ -46,11 +46,11 @@ h1, p {
    TYPOGRAPHY & UTILITIES
    ========================================= */
 h1 {
-    font-size: clamp(1.8rem, 7vw, 3.2rem); /* Сделали нижний порог меньше для мобилок */
+font-size: clamp(2.2rem, 8vw, 3.2rem); 
     line-height: 1.1;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
     margin-bottom: 20px;
 }
 
@@ -59,7 +59,7 @@ h1 {
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 40px;
-    letter-spacing: -1px;
+
 }
 
 .section-title span {
@@ -74,7 +74,7 @@ h1 {
     display: inline-block;
     margin-bottom: 10px;
     margin-right: 20px;
-    white-space: nowrap; /* Запрещает разрыв букв одного слова на разные строки */
+
 }
 
 .letter {
@@ -849,7 +849,7 @@ nav a:hover {
         text-align: center;
         font-size: clamp(2.8rem, 8vw, 3.5rem);
     }
-
+    
     /* Contacts */
     .contacts-section { flex-direction: column; }
     .paper-footer .contact-info {
@@ -928,15 +928,12 @@ nav a:hover {
 
 /* Small Mobile */
 @media screen and (max-width: 480px) {
-    /* Фиксы для имени Виктория на узких экранах */
-    .letter {
-        padding: 0 4px;
-        margin: -2px;
+
+
+    .name-wrapper {
+        font-size: clamp(3.5rem, 15vw, 3.5rem);
     }
-    .word-wrapper {
-        margin-right: 8px;
-    }
-    
+
     .project-item {
         gap: 12px 0;
         padding: 20px 0;
