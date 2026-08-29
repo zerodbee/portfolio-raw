@@ -688,17 +688,17 @@ nav a:hover {
 /* Определяем цвета для каждого класса */
 .mini-note.color-1 {
     
-  border: 1px dashed var(--accent-pink);
+  border: 2px dashed var(--accent-pink);
   color: var(--accent-pink);
 }
 
 .mini-note.color-2 {
-  border: 1px dashed var(--accent-purple);
+  border: 2px dashed var(--accent-purple);
   color: var(--accent-purple);
 }
 
 .mini-note.color-3 {
-  border: 1px dashed #6a9100;
+  border: 2px dashed #6a9100;
   color: #6a9100;
 }
 
