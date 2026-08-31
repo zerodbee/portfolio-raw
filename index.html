@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Виктория - Портфолио графического дизайнера</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%23ffffff' stroke-width='4'/></svg>">
     <link rel="stylesheet" href="style.css">
@@ -62,7 +64,7 @@
                     <a href="https://www.behance.net/gallery/255048103/redizajn-upakovki" target="_blank" class="project-card reveal">
                         <div class="project-card__image">
                             <div class="parallax-img-wrapper parallax-el" data-speed="0.1">
-                                <img src="assets/Проект-ODEVI.png" alt="Редизайн ODEVI">
+                                <img src="assets/Проект-ODEVI.webp" alt="Редизайн ODEVI">
                             </div>
                         </div>
                         <div class="project-card__info">
@@ -76,7 +78,7 @@
                     <a href="https://www.behance.net/gallery/254505147/firmennyj-stil-festivalja-zimniada" target="_blank" class="project-card reveal">
                         <div class="project-card__image">
                             <div class="parallax-img-wrapper parallax-el" data-speed="0.12">
-                                <img src="assets/Проект-Зимниада.jpg" alt="Fest ЗИМНИАДА">
+                                <img src="assets/Проект-Зимниада.webp" alt="Fest ЗИМНИАДА">
                             </div>
                         </div>
                         <div class="project-card__info">
@@ -90,7 +92,7 @@
                     <a href="https://disk.yandex.ru/d/2m4_vInU-udmKg" target="_blank" class="project-card reveal">
                         <div class="project-card__image">
                             <div class="parallax-img-wrapper parallax-el" data-speed="0.08">
-                                <img src="assets/Проект-Авира.jpg" alt="Издание АВИРА">
+                                <img src="assets/Проект-Авира.webp" alt="Издание АВИРА">
                             </div>
                         </div>
                         <div class="project-card__info">
@@ -104,7 +106,7 @@
                     <a href="https://www.behance.net/gallery/254801557/MONBON-razrabotka-dizajna-upakovki-korobki" target="_blank" class="project-card reveal">
                         <div class="project-card__image">
                             <div class="parallax-img-wrapper parallax-el" data-speed="0.1">
-                                <img src="assets/Проект-МОНБОН.jpg" alt="Упаковка MON BON">
+                                <img src="assets/Проект-МОНБОН.webp" alt="Упаковка MON BON">
                             </div>
                         </div>
                         <div class="project-card__info">
@@ -260,19 +262,17 @@
     <div class="custom-cursor" id="cursor"></div>
 
     <script>
-        window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    
-    // Минимальная задержка (например, 800мс), чтобы анимация успела воспроизвестись
-    setTimeout(() => {
+window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
         preloader.classList.add('preloader--hidden');
         
-        // Пересчет параллакса после скрытия загрузчика
         if (typeof initParallax === 'function') {
             initParallax();
         }
     });
-});
+
+    // Весь основной код выполняется сразу после построения HTML-дерева (DOMContentLoaded)
+    document.addEventListener('DOMContentLoaded', () => {
         // --- 1. Логика кастомного курсора ---
         const cursor = document.getElementById('cursor');
 
@@ -309,10 +309,9 @@
         // --- 3. Высокопроизводительный Параллакс ---
         let parallaxData = [];
         
-        // Высчитываем начальные позиции без трансофрмаций, чтобы избежать дерганий
-        function initParallax() {
+        // Делаем функцию доступной глобально, чтобы preloader мог её вызвать
+        window.initParallax = function() {
             parallaxData = Array.from(document.querySelectorAll('.parallax-el')).map(el => {
-                // Временно отключаем transform для чистого расчета
                 const currentTransform = el.style.transform;
                 el.style.transform = 'none'; 
                 
@@ -331,11 +330,9 @@
             });
         }
 
-        // Инициализируем при загрузке (повторно через 1 сек на случай стартовых анимаций)
-        window.addEventListener('load', () => {
-            initParallax();
-            setTimeout(initParallax, 1000); 
-        });
+        // Первичная инициализация параллакса и повторный вызов через 1 сек для подстраховки
+        initParallax();
+        setTimeout(initParallax, 1000); 
         window.addEventListener('resize', initParallax);
 
         let isScrolling = false;
@@ -346,8 +343,6 @@
                     const windowCenter = scrollY + window.innerHeight / 2;
 
                     parallaxData.forEach(item => {
-                        // Рассчитываем параллакс так, чтобы элемент был ровно по центру 
-                        // когда пользователь смотрит прямо на него
                         const elCenter = item.topPos + (item.height / 2);
                         const diff = windowCenter - elCenter;
                         const y = diff * item.speed;
@@ -358,6 +353,7 @@
                 isScrolling = true;
             }
         });
+    });
     </script>
 </body>
 </html>
