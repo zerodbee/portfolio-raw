@@ -654,10 +654,25 @@ body, a, button {
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s ease;
 }
 
-.preloader__emoji {
-    font-size: 5rem;
-    user-select: none;
-    animation: emojiWink 1.2s infinite ease-in-out;
+.preloader__svg {
+    width: 70px;
+    height: 70px;
+    /* Общая плавная анимация вращения и легкого подпрыгивания */
+    animation: preloaderSpin 2s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Эффект дыхания/пульсации элементов внутри смайлика */
+.preloader__svg circle, 
+.preloader__svg path {
+    animation: preloaderPulse 1.2s infinite ease-in-out alternate;
+}
+
+/* Разные задержки для глаз, чтобы они оживали */
+.preloader__svg circle:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.preloader__svg circle:nth-child(3) {
+    animation-delay: 0.4s;
 }
 
 .preloader--hidden {
@@ -666,11 +681,27 @@ body, a, button {
     pointer-events: none;
 }
 
-@keyframes emojiWink {
-    0%, 100% {
-        transform: scale(1) rotate(0deg);
+@keyframes preloaderSpin {
+    0% {
+        transform: rotate(0deg) scale(0.9);
     }
     50% {
-        transform: scale(1.25) rotate(-10deg);
+        transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(360deg) scale(0.9);
+    }
+}
+
+@keyframes preloaderPulse {
+    0% {
+        opacity: 0.4;
+        transform: scale(0.95);
+        transform-origin: center;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.05);
+        transform-origin: center;
     }
 }
