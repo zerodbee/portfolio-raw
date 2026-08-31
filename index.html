@@ -1,292 +1,228 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Виктория - Портфолио графического дизайнера</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Space+Mono&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%23C5F04F' stroke-width='4'/></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%23ffffff' stroke-width='4'/></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="custom-cursor"></div>
     <div class="container">
+        <!-- HEADER -->
         <header class="header" id="header">
-            <div class="logo">@vkt_raw</div>
+            <div class="logo">@VKT_RAW</div>
             <nav class="nav">
-                <a href="#hero" class="nav__link">Главная</a>
-                <a href="#projects" class="nav__link">Мои проекты</a>
+                <a href="#projects" class="nav__link">Проекты</a>
+                <a href="#cases" class="nav__link">Направления</a>
                 <a href="#about" class="nav__link">Обо мне</a>
                 <a href="#contacts" class="nav__link">Контакты</a>
             </nav>
         </header>
 
+        <!-- HERO SECTION -->
         <main class="hero" id="hero">
-            <div class="hero__content">
-                <h1 class="title title--main">
-                    ВИКТОРИЯ,
-                    <br>
-                    <span class="text-purple">ГРАФИЧЕСКИЙ <br> ДИЗАЙНЕР</span>
-                </h1>
-
-                <p class="hero__desc">
-                               Специализируюсь на создании айдентики, верстке печатных изданий и разработке визуальных концепций.
-                </p>
-
-                <a href="#projects" class="hero__btn">Перейти к проектам<span>&#8599;</span></a>
+            <div class="hero__top">
+                <h1 class="title title--main">ВИКТОРИЯ</h1>
+                <h1 class="title title--main title--outline">ГРАФИЧЕСКИЙ ДИЗАЙНЕР</h1>
             </div>
-
-            <div class="hero__photo-wrapper" id="photoWidget">
-                <img src="assets/image-2.webp" alt="Виктория" class="hero__photo">
+            <div class="hero__bottom">
+                <div class="hero__photo-wrapper">
+                    <img src="assets/image-2.webp" alt="Виктория" class="hero__photo">
+                </div>
+                <div class="hero__info">
+                    <p class="hero__desc">
+                        Специализируюсь на создании айдентики, верстке печатных изданий и разработке визуальных концепций. Моя цель — создавать дизайн, который решает бизнес-задачи и надолго запоминается.
+                    </p>
+                    <a href="#projects" class="btn">Смотреть проекты <span>↓</span></a>
+                </div>
             </div>
         </main>
+        
+        <!-- PROJECTS SECTION -->
+        <section class="projects" id="projects">
+            <div class="section-header">
+                <h2 class="title title--section">ПРОЕКТЫ</h2>
+                <a href="https://www.behance.net/wg77" target="_blank" class="section-link">Смотреть на Behance ↗</a>
+            </div>
+            
+            <div class="projects__grid">
+                <a href="https://www.behance.net/wg77" target="_blank" class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/Проект-ODEVI.png" alt="Редизайн ODEVI">
+                    </div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Редизайн ODEVI</h3>
+                        <div class="project-card__tags">
+                            <span>Упаковка</span><span>Логотип</span><span>Соц.сети</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://www.behance.net/wg77" target="_blank" class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/Проект-Зимниада.jpg" alt="Fest ЗИМНИАДА">
+                    </div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Fest ЗИМНИАДА</h3>
+                        <div class="project-card__tags">
+                            <span>Фирменный стиль</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://www.behance.net/wg77" target="_blank" class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/Проект-Авира.jpg" alt="Издание АВИРА">
+                    </div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Издание АВИРА</h3>
+                        <div class="project-card__tags">
+                            <span>Верстка</span><span>Мерч</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://www.behance.net/wg77" target="_blank" class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/Проект-МОНБОН.jpg" alt="Упаковка MON BON">
+                    </div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Упаковка MON BON</h3>
+                        <div class="project-card__tags">
+                            <span>Разработка упаковки</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- CASES / SERVICES -->
+        <section class="cases" id="cases">
+            <h2 class="title title--section">НАПРАВЛЕНИЯ</h2>
+            <div class="cases__list">
+                
+                <div class="cases__item">
+                    <div class="cases__num">01</div>
+                    <div class="cases__col-title">
+                        <h3 class="cases__title">Упаковка</h3>
+                        <div class="cases__tags">
+                            <span>Adobe Illustrator</span><span>Полиграфия</span>
+                        </div>
+                    </div>
+                    <div class="cases__col-desc">
+                        <p>Работа с печатной графикой охватывает создание визуальных решений для носителей разных форматов и материалов. Проектирование товарной упаковки, визуальное оформление текстильной продукции и корпоративного мерча.</p>
+                        <a href="https://disk.yandex.ru/d/fytX3h_qH-3Ffw" target="_blank" class="btn btn--outline">Смотреть кейсы ↗</a>
+                    </div>
+                </div>
+
+                <div class="cases__item">
+                    <div class="cases__num">02</div>
+                    <div class="cases__col-title">
+                        <h3 class="cases__title">POS-Материалы</h3>
+                        <div class="cases__tags">
+                            <span>Инфографика</span><span>Adobe Illustrator</span>
+                        </div>
+                    </div>
+                    <div class="cases__col-desc">
+                        <p>Разработка комплексных дизайн-решений для визуального оформления раздаточных и POS-материалов с акцентом на продвижение программ лояльности и привлечение внимания.</p>
+                        <a href="https://disk.yandex.ru/d/tR2dEikeKY4P-A" target="_blank" class="btn btn--outline">Смотреть кейсы ↗</a>
+                    </div>
+                </div>
+
+                <div class="cases__item">
+                    <div class="cases__num">03</div>
+                    <div class="cases__col-title">
+                        <h3 class="cases__title">Инфографика</h3>
+                        <div class="cases__tags">
+                            <span>Figma</span><span>Photoshop</span>
+                        </div>
+                    </div>
+                    <div class="cases__col-desc">
+                        <p>Создание графического контента для быстрого донесения преимуществ продукта. Строю макеты на базе жестких сеток и четкой иерархии, без визуального шума.</p>
+                        <a href="https://disk.yandex.ru/d/HyvB6q7zGKvHog" target="_blank" class="btn btn--outline">Смотреть кейсы ↗</a>
+                    </div>
+                </div>
+
+                <div class="cases__item">
+                    <div class="cases__num">04</div>
+                    <div class="cases__col-title">
+                        <h3 class="cases__title">Верстка InDesign</h3>
+                        <div class="cases__tags">
+                            <span>Многостраничные издания</span>
+                        </div>
+                    </div>
+                    <div class="cases__col-desc">
+                        <p>Верстка печатной продукции в Adobe InDesign (от буклетов до изданий). Разработка структурированных макетов, модульных сеток и чистых типографических систем.</p>
+                        <a href="https://disk.yandex.ru/d/mzSpfniAR3NMDQ" target="_blank" class="btn btn--outline">Смотреть кейсы ↗</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </div>
 
-    <div class="paper-footer-wrapper">
+    <!-- FOOTER WITH ABOUT & CONTACTS -->
+    <div class="paper-footer-wrapper" id="about">
         <div class="tape top-left-tape"></div>
         <footer class="paper-footer">
             <div class="container">
-
-                <h2 class="title title--section" id="projects">ПРОЕКТЫ</h2>
-
-                <section class="projects">
-                    <div class="projects__grid">
-                        <div class="project-card">
-                            <div class="project-card__image">
-                                <img src="assets/Проект-ODEVI.png" alt="Редизайн ODEVI">
-                            </div>
-                            <div class="project-card__info">
-                                <h3 class="project-card__title">Редизайн ODEVI <span>&#8599;</span></h3>
-                                <p class="project-card__desc">// Редизайн упаковки, создание лого, соц.сети</p>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-card__image">
-                                <img src="assets/Проект-Зимниада.jpg" alt="Fest ЗИМНИАДА">
-                            </div>
-                            <div class="project-card__info">
-                                <h3 class="project-card__title">Fest ЗИМНИАДА<span>&#8599;</span></h3>
-                                <p class="project-card__desc">// Создание фирменного стиля фестиваля</p>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-card__image">
-                                <img src="assets/Проект-Авира.jpg" alt="Издание АВИРА">
-                            </div>
-                            <div class="project-card__info">
-                                <h3 class="project-card__title">Издание АВИРА<span>&#8599;</span></h3>
-                                <p class="project-card__desc">// Верстка издания, создание мерча</p>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-card__image">
-                                <img src="assets/Проект-МОНБОН.jpg" alt="Упаковка MON BON">
-                            </div>
-                            <div class="project-card__info">
-                                <h3 class="project-card__title">Упаковка MON BON <span>&#8599;</span></h3>
-                                <p class="project-card__desc">// Разработка упаковки</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="cases" id="cases">
-                    <h2 class="title title--section">ВСЕ КЕЙСЫ</h2>
-
-                    <div class="cases__list">
-                        <div class="cases__item">
-                            <div class="cases__header">
-                                <div class="cases__title-group">
-                                    <img src="assets/Проект-упаковка-1.jpg" alt="Упаковка" class="cases__image">
-                                    <h3 class="cases__title">Упаковка</h3>
-                                </div>
-                                <div class="cases__subtitle">// Adobe Illustrator<br>полиграфия</div>
-                            </div>
-
-                            <div class="cases__details">
-                                <div class="cases__content">
-                                    <p class="cases__desc">
-                                        Работа с печатной графикой охватывает создание визуальных решений для носителей
-                                        разных форматов и материалов. В этот блок задач входит проектирование товарной
-                                        упаковки, а также разработка визуального оформления для текстильной продукции и
-                                        корпоративного мерча.
-                                    </p>
-                                    <div class="cases__tags">
-                                        <span class="cases__tag">Разработка дизайн-концепции</span>
-                                        <span class="cases__tag">Дизайн упаковки</span>
-                                        <span class="cases__tag">Предпечатная подготовка</span>
-                                    </div>
-                                    <a class="cases__link" href="https://disk.yandex.ru/d/fytX3h_qH-3Ffw"
-                                        target="_blank" rel="noopener noreferrer">Смотреть все кейсы ↗</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cases__item">
-                            <div class="cases__header">
-                                <div class="cases__title-group">
-                                    <img src="assets/Проект-ПОС.png" alt="Раздаточные материалы" class="cases__image">
-                                    <h3 class="cases__title">POS-Материалы</h3>
-                                </div>
-                                <div class="cases__subtitle">// Инфографика<br>Adobe Illustrator</div>
-                            </div>
-
-                            <div class="cases__details">
-                                <div class="cases__content">
-                                    <p class="cases__desc">
-                                       Разработка комплексных дизайн-решений для визуального оформления раздаточных и POS-материалов с акцентом на продвижение программ лояльности. Мной были успешно реализованы множество подобных проектов, каждый из которых был адаптирован под конкретные задачи и переведен в физическое производство.
-                                    </p>
-                                    <div class="cases__tags">
-                                        <span class="cases__tag">Adobe Illustrator</span>
-                                        <span class="cases__tag">Инфографика</span>
-                                        <span class="cases__tag">Нейросети</span>
-                                    </div>
-                                    <a class="cases__link" href="https://disk.yandex.ru/d/tR2dEikeKY4P-A"
-                                        target="_blank" rel="noopener noreferrer">Смотреть все кейсы ↗</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cases__item">
-                            <div class="cases__header">
-                                <div class="cases__title-group">
-                                    <img src="assets/Проект-Инфографика.png" alt="Инфографика" class="cases__image">
-                                    <h3 class="cases__title">Инфографика</h3>
-                                </div>
-                                <div class="cases__subtitle">// Adobe Photoshop<br>Adobe Illustrator</div>
-                            </div>
-
-                            <div class="cases__details">
-                                <div class="cases__content">
-                                    <p class="cases__desc">
-                                      Создание графического контента, цель которого — быстро донести ключевые преимущества продукта или услуги до аудитории. Моя задача — убрать визуальный шум и лишние декоративные элементы, которые мешают восприятию. Я строю макеты на базе жестких сеток и четкой иерархии, чтобы информация считывалась интуитивно.
-                                    </p>
-                                    <div class="cases__tags">
-                                        <span class="cases__tag">Figma</span>
-                                        <span class="cases__tag">Инфографика</span>
-                                        <span class="cases__tag">Adobe Photoshop</span>
-                                    </div>
-                                    <a class="cases__link" href="https://disk.yandex.ru/d/HyvB6q7zGKvHog"
-                                        target="_blank" rel="noopener noreferrer">Смотреть все кейсы ↗</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cases__item">
-                            <div class="cases__header">
-                                <div class="cases__title-group">
-                                    <img src="assets/Проект-Индизайн.jpg" alt="Верстка InDesign" class="cases__image">
-                                    <h3 class="cases__title">Верстка InDesign</h3>
-                                </div>
-                                <div class="cases__subtitle">// Многостраничные издания</div>
-                            </div>
-
-                            <div class="cases__details">
-                                <div class="cases__content">
-                                    <p class="cases__desc">
-                                     Верстка различных видов печатной продукции в Adobe InDesign (от буклетов до многостраничных изданий) — занимает важное место в моей практике графического дизайнера. Этот процесс охватывает разработку структурированных макетов, продуманных модульных сеток и чистых типографических систем, которые позволяют гармонично объединять объёмный текстовый материал, таблицы, иллюстрации и техническую графику.
-                                    </p>
-                                    <div class="cases__tags">
-                                        <span class="cases__tag">Adobe InDesign</span>
-                                    </div>
-                                    <a class="cases__link" href="https://disk.yandex.ru/d/mzSpfniAR3NMDQ"
-                                        target="_blank" rel="noopener noreferrer">Смотреть все кейсы ↗</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </section>
-
-<section class="about" id="about">
-                    <h2 class="title title--section">ОБО МНЕ</h2>
-                    
+                <!-- ABOUT -->
+                <section class="about">
                     <div class="about__grid">
-                        <div class="about__text">
-                            <p>
-                                Специализируюсь на создании айдентики, верстке печатных изданий и разработке комплексных визуальных концепций для бизнеса. Мой опыт охватывает как разработку товарной упаковки и мерча, так и создание многостраничных изданий, POS-материалов и графики для digital-среды.
-                            </p>
-                            <p>
-                                В основе моей работы — глубокое внимание к деталям, выверенная типографика, жесткие сетки и гибкий подход к стилю. Я не ограничиваюсь одной эстетикой, а подбираю визуальный язык под конкретную задачу и ценности бренда: от строгой классики до смелых современных решений с использованием нейросетей и передовых инструментов.
-                            </p>
-                            <p>
-                                Умею выстраивать процесс от генерации идеи и проектирования макета до качественной предпечатной подготовки (prepess), чтобы результат на экране и в тираже совпадал на 100%. Моя цель — создавать дизайн, который не просто украшает продукт, а работает, решает бизнес-задачи и надолго запоминается аудитории.
-                            </p>
+                        <div class="about__col-left">
+                            <h2 class="title title--section">ОБО МНЕ</h2>
                         </div>
-                        
-                        <div class="about__skills">
-                            <h3 class="about__subtitle">Стек & Навыки</h3>
-                            <div class="cases__tags">
-                                <span class="cases__tag">Adobe Photoshop</span>
-                                <span class="cases__tag">Adobe Illustrator</span>
-                                <span class="cases__tag">Adobe InDesign</span>
-                                <span class="cases__tag">Figma</span>
-                                <span class="cases__tag">Нейросети & ИИ</span>
-                                <span class="cases__tag">Предпечатная подготовка</span>
-                                <span class="cases__tag">Упаковка & POSM</span>
+                        <div class="about__col-right">
+                            <div class="about__text">
+                                <p>В основе моей работы — глубокое внимание к деталям, выверенная типографика, жесткие сетки и гибкий подход к стилю. Я не ограничиваюсь одной эстетикой, а подбираю визуальный язык под конкретную задачу и ценности бренда.</p>
+                                <p>Умею выстраивать процесс от генерации идеи и проектирования макета до качественной предпечатной подготовки (prepress), чтобы результат на экране и в тираже совпадал на 100%.</p>
+                            </div>
+                            <div class="about__skills-wrap">
+                                <div class="about__skills-group">
+                                    <span>// ИНСТРУМЕНТЫ</span>
+                                    <div class="cases__tags">
+                                        <span>Adobe Photoshop</span>
+                                        <span>Adobe Illustrator</span>
+                                        <span>Adobe InDesign</span>
+                                        <span>Figma</span>
+                                        <span>Нейросети</span>
+                                    </div>
+                                </div>
+                                <div class="about__skills-group">
+                                    <span>// СПЕЦИАЛИЗАЦИЯ</span>
+                                    <div class="cases__tags">
+                                        <span>Предпечатная подготовка</span>
+                                        <span>Упаковка & POSM</span>
+                                        <span>Айдентика</span>
+                                        <span>Многостраничная верстка</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="contacts" id="contacts">
-                    <div class="contacts__info">
-                        <h2 class="title title--section">СПОСОБЫ СВЯЗИ</h2>
-
-                        <p class="contacts__desc">
-                            Открыта для новых проектов и интересных коллабораций.
-                        </p>
-
-                        <div class="contacts__list">
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=oborotova.vika.06@gmail.com"
-                                class="contacts__link" target="_blank">
-                                <div class="contacts__icon">✉</div>
-                                oborotova.vika.06@gmail.com
-                            </a>
-                            <a href="https://t.me/vkt_raw" class="contacts__link" target="_blank">
-                                <div class="contacts__icon">✈</div>
-                                @vkt_raw (Telegram)
-                            </a>
-                            <a href="https://www.behance.net/wg77" class="contacts__link" target="_blank">
-                                <div class="contacts__icon">Be</div>
-                                behance.net
-                            </a>
-                            <a href="tel:+79936354050" class="contacts__link">
-                                8-(993)-635-40-50
-                            </a>
-                        </div>
+                <!-- CONTACTS -->
+                <div class="footer__grid" id="contacts">
+                    <div class="footer__left">
+                        <h2 class="title title--section">СВЯЗАТЬСЯ<br>СО МНОЙ</h2>
+                        <p class="footer__desc">Открыта для новых проектов и интересных коллабораций. Напишите мне для обсуждения вашей задачи.</p>
                     </div>
-                </section>
+                    <div class="footer__right">
+                        <a href="https://t.me/vkt_raw" target="_blank" class="footer__link">Telegram ↗</a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=oborotova.vika.06@gmail.com" target="_blank" class="footer__link">E-mail ↗</a>
+                        <a href="https://www.behance.net/wg77" target="_blank" class="footer__link">Behance ↗</a>
+                        <a href="tel:+79936354050" class="footer__link">8 (993) 635-40-50 ↗</a>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <span>© 2026 Виктория Оборотова</span>
+                    <span>Графический дизайнер</span>
+                </div>
             </div>
         </footer>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Аккордеон проектов
-            const caseHeaders = document.querySelectorAll('.cases__header');
-            caseHeaders.forEach(header => {
-                header.addEventListener('click', function () {
-                    const item = this.parentElement;
-                    const isActive = item.classList.contains('is-active');
-                    document.querySelectorAll('.cases__item').forEach(w => w.classList.remove('is-active'));
-                    if (!isActive) {
-                        item.classList.add('is-active');
-                    }
-                });
-            });
-        });
-
-
-    </script>
 </body>
-
 </html>
