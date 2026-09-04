@@ -9,7 +9,7 @@
     --text-muted: #5a5959;
     --border-dark: rgba(255, 255, 255, 0.2);
     --border-light: rgba(0, 0, 0, 0.2);
-    --bg-purple: #7e00c2;
+    --bg-purple: #b937ff;
 }
 
 * {
@@ -108,32 +108,10 @@ a {
 /* =========================================
 4. КНОПКИ И ССЫЛКИ
 ========================================= */
-.btn, .footer__link, .section-link {
+.footer__link, .section-link {
     transition: opacity .3s;
 }
 
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: .95rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    border-bottom: 1px solid var(--text-main-onblk);
-    padding-bottom: 5px;
-    width: fit-content;
-}
-
-.btn:hover, .section-link:hover {
-    opacity: .7;
-}
-
-.btn--outline {
-    border: 1px solid var(--border-dark);
-    padding: 12px 28px;
-    border-radius: 40px;
-}
 
 .btn--outline:hover {
     background: var(--text-main-onblk);
@@ -155,32 +133,47 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
-    border-bottom: 1px solid var(--border-dark);
+    border-bottom: 2px solid var(--border-dark);
 }
 
 .logo {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: .05em;
 }
 
 .nav {
+    margin-left: 15px;
     display: flex;
     gap: 35px;
+    flex-wrap: wrap;
 }
 
 .nav__link {
     font-size: .85rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .05em;
-    color: var(--text-muted-onblk);
-    transition: color .3s;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .nav__link:hover {
     color: var(--text-main-onblk);
+}
+
+.nav__link--highlight {
+    color: var(--bg-purple);
+    border-bottom: 1px solid var(--bg-purple);
+    padding-bottom: 2px;
+    white-space: nowrap;
+}
+
+.nav__link--highlight:hover {
+    color: var(--bg-purple);
+
 }
 
 /* =========================================
@@ -644,15 +637,16 @@ a {
     }
 
     .header {
-        gap: 30px;
         flex-direction: column;
         align-items: flex-start;
+        gap: 20px;
     }
-    
     .nav {
         flex-wrap: wrap;
-    }
-    
+        gap: 15px;
+    margin-left: 0px;
+}
+
     .footer__link {
         font-size: 1.5rem;
     }
